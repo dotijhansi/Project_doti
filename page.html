@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Profit Organization</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body fills the viewport */
+        }
+
+        main {
+            flex: 1; /* Allow the main content to grow */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        // Function to show the respective section based on the clicked link
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">
+        <img src="theresa.jpeg" alt="Non-Profit Organization Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('mission')">Mission</a></li>
+            <li><a href="#" onclick="showSection('programs')">Programs</a></li>
+            <li><a href="#" onclick="showSection('events')">Events</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main content -->
+<main>
+    <!-- Home -->
+<section id="home">
+    <div class="welcome">
+        <h1 style="color: violet;">Welcome to Non-Profit Organization</h1>
+        <p style="color: violet;">Thank you for visiting Non-Profit Organization. We are dedicated to making a positive impact in our community through various initiatives and projects. Together, we can create a better world for everyone.</p>
+        <a href="#" onclick="showSection('about')" class="cta-button">Learn More</a>
+    </div>
+</section>
+
+    <!-- About -->
+    <section id="about" style="display: none;">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Non-Profit Organization was founded in [year] with a mission to [briefly describe mission]. Over the years, we have worked tirelessly to [highlight key achievements]. Our team is composed of passionate individuals who are committed to [organization's values].</p>
+            <p>We believe that every person deserves [mention key beliefs], and through our programs and events, we aim to [describe the impact]. Together with our volunteers, donors, and partners, we strive to make a difference in the lives of those in need.</p>
+            <a href="#" onclick="showSection('contact')" class="cta-button">Get Involved</a>
+        </div>
+    </section>
+
+    <!-- Mission -->
+<section id="mission" style="display: none; background-image: url('solgan.jpeg'); background-size: cover; background-position: center; height: 100vh;">
+    <div class="mission-content">
+        <h2>Our Mission</h2>
+        <p>Detailed explanation of the organization's mission, vision, and values.</p>
+        <!-- Stories or testimonials go here -->
+        <a href="#" onclick="showSection('about')" class="cta-button">Back</a>
+    </div>
+</section>
+
+    <!-- Programs -->
+    <section id="programs" style="display: none; background-image: url('program.jpeg'); background-size: cover; background-position: center; height: 100vh;">
+        <div class="program-list">
+            <h2>Our Programs</h2>
+            <div class="program">
+                <h3>Program Title</h3>
+                <p>Description of the program and its impact.</p>
+                <a href="#" onclick="showSection('about')" class="cta-button">Back</a>
+            </div>
+            <!-- Additional programs listed here -->
+        </div>
+    </section>
+
+    <!-- Events -->
+    <section id="events" style="display: none; background-image: url('donation.jpeg'); background-size: cover; background-position: center; height: 100vh;">
+        <div class="event-list">
+            <h2>Upcoming Events</h2>
+            <div class="event">
+                <h3>Event Title</h3>
+                <p>Date, time, location, and brief description.</p>
+                <a href="#" onclick="showSection('about')" class="cta-button">Back</a>
+            </div>
+            <!-- Additional events listed here -->
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="display: none;">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <!-- Contact form goes here -->
+            <a href="#" onclick="showSection('about')" class="cta-button">Back</a>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p>Contact information: GNITS-Hyderabad,9997766554 ,principal@gnits.com</p>
+        <p>Check GNITS website for social media links.</p>
+    </div>
+    <p class="copyright">Copyright &copy; 2024 Non-Profit Organization</p>
+</footer>
+
+</body>
+</html>
